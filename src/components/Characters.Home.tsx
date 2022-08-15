@@ -1,50 +1,79 @@
-import { motion } from 'framer-motion';
-import styles from '../styles/styles.module.css';
-import characters from '../assets/images/RickAndMorty-TotalRickall-900x900.jpg'
-import pointing from '../assets/images/rm-pointing.png'
-import { CharacterCard } from './CharacterCard';
-import rick from '../assets/images/1.jpeg';
-import morty from '../assets/images/2.jpeg';
-import summer from '../assets/images/3.jpeg';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Card } from './Card/Card';
 
-export interface CardsData {
-  name: string;
-  color: string;
-  image: string;
+import characters from '../assets/images/RickAndMorty-TotalRickall-900x900.jpg';
+import styles from '../styles/styles.module.css';
+import { GetCharactersHomeSectionData } from '../data/CharactersData';
+
+const sentence = {
+  hidden: {opacity: 1},
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      staggerChildren: 0.04
+    }
+  }
 }
 
-const CardData:CardsData[] = [
-  { name: 'Rick Sanchez', color: 'rgb(62, 214, 214)', image: rick },
-  { name: 'Morty Smith', color: 'rgb(240, 233, 43)', image: morty },
-  { name: 'Summer Smith', color: 'rgb(232, 128, 222)', image: summer }
-]
+const letter = {
+  hidden: { opacity: 0, y: 50},
+  visible: {
+    opacity: 1,
+    y: 0
+  }
+}
+
 export const HomeCharacters = () => {
+  const CardsData = GetCharactersHomeSectionData();
+  
   return (
-    <motion.div
-      className={styles.SectionContainer}
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 0.5}}
-      >
+    <section className={styles.SectionContainer} >
       <div className={styles.SectionContent}>
-        <h2 style={{ fontSize:'4rem', padding: '0.3em 0', fontFamily:`'Amatic SC', cursive`, fontWeight:700, letterSpacing:'3px', color:'rgba(181, 17, 214, 1)'  }}>Details of your favorite characters</h2>
-      
+        <HomeCharacterSectionTitle/>
         <div className={styles.content}>
           <img src={ characters } alt="characterimg"  style={{ height: '525px',paddingLeft: '1em'}}/>
-          <div style={{display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', position:'relative'}}>
-            <div style={{ display:'flex', flexDirection:'row', marginTop:'4em'}}>
+          <div className={styles.cardsContainer}>
+            <div className={styles.cards}>
               {
-                CardData.map( (char,i) => (
-                  <CharacterCard charactersData={char} index={i}/>)
-                )
+                CardsData.map( (character,i) => (
+                  <Card character={character} index={i} >
+                    <Card.Image />
+                    <Card.Title  />
+                  </Card>
+                ))
               }
             </div>
             <NavLink to='characters' className={styles.button}>GO TO CHARACTERS PAGE</NavLink>
           </div>
         </div>
       </div>
-    </motion.div>
+    </section>
   )
 }
 
+
+
+ {/* !Colocado aqui porque es pura logica de framer motion para su animacion */}
+const HomeCharacterSectionTitle = () =>{
+  return (
+    <motion.div 
+      variants={sentence}
+      initial="hidden"
+      animate="visible"
+      className={styles.charactersTitle}
+    >
+    { 'Details of your favorite characters'.split('').map( (letra, i) => (
+        <motion.h2
+          key={letter + "-" + i}
+          variants={letter}
+          style={{ padding:'0.25rem'}}
+        >
+          {letra}
+        </motion.h2>
+      )
+    )}
+    </motion.div>
+  )
+}
