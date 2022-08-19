@@ -29,9 +29,12 @@ export const HomeCharacters = () => {
   const CardsData = GetCharactersHomeSectionData();
   
   return (
-    <section className={styles.SectionContainer} >
+    <motion.section 
+      initial={{ opacity: 0, y:-100}}
+      whileInView={{ opacity: 1, y: 0 , transition:{ duration: 0.6, ease:"easeIn" }}}
+      className={styles.SectionContainer} >
       <div className={styles.SectionContent}>
-        <HomeCharacterSectionTitle/>
+        <HomeCharacterSectionTitle title="'Details of your favorite characters"/>
         <div className={styles.content}>
           <img src={ characters } alt="characterimg"  style={{ height: '525px',paddingLeft: '1em'}}/>
           <div className={styles.cardsContainer}>
@@ -49,14 +52,18 @@ export const HomeCharacters = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 
 
 
+interface titleProps {
+  title: string;
+}
+
  {/* !Colocado aqui porque es pura logica de framer motion para su animacion */}
-const HomeCharacterSectionTitle = () =>{
+const HomeCharacterSectionTitle = ({title}:titleProps) =>{
   return (
     <motion.div 
       variants={sentence}
@@ -64,7 +71,7 @@ const HomeCharacterSectionTitle = () =>{
       animate="visible"
       className={styles.charactersTitle}
     >
-    { 'Details of your favorite characters'.split('').map( (letra, i) => (
+    { title.split('').map( (letra, i) => (
         <motion.h2
           key={letter + "-" + i}
           variants={letter}
