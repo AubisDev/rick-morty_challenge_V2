@@ -13,7 +13,6 @@ const Home = () => {
     const handleScroll = () => {
       const div = divRef.current;
       const { y  } = div.getBoundingClientRect();
-      console.log(y);
       const backgroundColor = y <= -1300 ? '#03111B' : y <= -300 ? '#9dd4d9' : '#6c059c';
       setBackground(backgroundColor);
     }

@@ -63,13 +63,13 @@ interface titleProps {
 }
 
  {/* !Colocado aqui porque es pura logica de framer motion para su animacion */}
-const HomeCharacterSectionTitle = ({title}:titleProps) =>{
+export const HomeCharacterSectionTitle = ({title}:titleProps) =>{
   return (
     <motion.div 
       variants={sentence}
       initial="hidden"
       animate="visible"
-      className={styles.charactersTitle}
+      className={`${styles.charactersTitle} ${styles.blueTitle}`}
     >
     { title.split('').map( (letra, i) => (
         <motion.h2
