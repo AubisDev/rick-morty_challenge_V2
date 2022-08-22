@@ -19,7 +19,7 @@ export const Card = ({children,  index, character }: CardProps ) => {
         initial={{  opacity: 0, y: -50  }} 
         whileInView={{  opacity: 1, x: 0, y: 0}}
         whileHover={{  scale: 1.15, transition:{ duraton: 0.3 }}}
-        transition={{ duration : 0.6, delay: index && index * 0.2 }}
+        transition={{ duration : 0.8, delay: index && index * 0.4 }}
         className={`${styles.card} `} 
         style={{background: character.color}}
       >

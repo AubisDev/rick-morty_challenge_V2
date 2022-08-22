@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Card } from './Card.component';
 
-import characters from '../assets/images/RickAndMorty-TotalRickall-900x900.jpg';
+import characters from '../assets/images/RickAndMorty-TotalRickall-900x900.webp';
 import styles from '../styles/styles.module.css';
 import { GetCharactersHomeSectionData } from '../data/CharactersData';
 
@@ -34,7 +34,7 @@ export const HomeCharacters = () => {
       whileInView={{ opacity: 1, y: 0 , transition:{ duration: 0.6, ease:"easeIn" }}}
       className={styles.SectionContainer} >
       <div className={styles.SectionContent}>
-        <HomeCharacterSectionTitle title="Details of your favorite characters"/>
+        <HomeCharacterSectionTitle title="Details  of  your  favorite  characters"/>
         <div className={styles.content}>
           <img src={ characters } alt="characterimg"  style={{ height: '525px',paddingLeft: '1em'}}/>
           <div className={styles.cardsContainer}>

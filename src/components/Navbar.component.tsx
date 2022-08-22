@@ -1,5 +1,5 @@
 import styles from './../styles/styles.module.css';
-import logo from './../assets/images/logo.webp';
+import logo from './../assets/images/Rick_and_Morty.svg.webp';
 import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
@@ -7,15 +7,14 @@ const Navbar = () => {
   return (
     <nav className={styles.container}>
       <div className={styles.navbar}>
-        <img src={logo} alt="logo rick and morty" className={styles.navbar__logo} />
         <ul className={styles.navbar__menu}>
           {
-            ['/','Characters','Episodes'].map( (page) => (
+            ['/','Characters'].map( (page) => (
               <li key={page} className={styles.navbar__item}>
                 <NavLink 
                   to={page}
                   style={({ isActive }) =>
-                    isActive ? {text: '#34c0c9'} : {color: 'rgb(105,247,70,0.6)'}
+                    isActive ? {text: '#34c0c9'} : {color: '#d3e85e'}
                 }
                 >
                   {page === '/' ? 'Home' : page}

@@ -36,8 +36,15 @@ export const EpisodeSection = () => {
             <div className={styles.episodesContent} >
               <h2>{`Season ${currentSeason}`} </h2>
               {
-                seasonData?.map( (season) => (
-                  <h4 key={season.id} > <span>{season.episode}</span> <span>{season.name} </span></h4>
+                seasonData?.map( (season,i) => (
+                  <motion.h4 
+                    initial={{  opacity: 0, y: -50  }} 
+                    whileInView={{  opacity: 1, y: 0}}
+                    transition={{ duration : 0.6, delay: i && i * 0.1 }}
+                    key={season.id} 
+                  > 
+                    <span>{season.episode}</span> <span>{season.name} </span>
+                  </motion.h4>
                 ))
               }
             </div>

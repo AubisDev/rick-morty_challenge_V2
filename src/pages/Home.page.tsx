@@ -15,7 +15,7 @@ const Home = () => {
   }, [])
   
   return (
-    <main className={styles.homeContainer} ref={divRef} style={{ backgroundColor: background }}>
+    <main className={styles.homeContainer} ref={divRef} style={{ backgroundColor: background, transitionDuration: '300ms', transitionTimingFunction:'ease-in' }}>
       <HomeHeader/>     
       <HomeCharacters/>
       <EpisodeSection/>

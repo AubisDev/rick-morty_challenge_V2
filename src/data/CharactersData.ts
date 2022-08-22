@@ -1,7 +1,7 @@
 
-import rick from '../assets/images/1.jpeg';
-import morty from '../assets/images/2.jpeg';
-import summer from '../assets/images/3.jpeg';
+import rick from '../assets/images/1.webp';
+import morty from '../assets/images/2.webp';
+import summer from '../assets/images/3.webp';
 
 export const GetCharactersHomeSectionData = () => {
     return [

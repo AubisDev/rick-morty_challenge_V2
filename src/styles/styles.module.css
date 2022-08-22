@@ -12,16 +12,14 @@
   display:flex;
   flex-direction: row;
   height: 100%;
-  justify-content:space-between;
+  justify-content:center;
   margin: 0 auto;
   width: 80%;
-
-
 }
 
 .navbar__logo{
-  height:150px;
-  width: 250px;
+  height:70px;
+  width: 280px;
 }
 
 .navbar__menu{
@@ -123,10 +121,14 @@
   box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
 }
 
 
 .homeTitle{
+  position: absolute;
+  top: 8%;
+  transform: translateY(-50%,-50%);
   width: 60%;
   height: 100%;
   display: flex;
@@ -145,7 +147,7 @@
 .homeTitle h2:first-child{
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
+  font-size: 5rem;
   margin-bottom: -6rem;
   margin-left: -10px;
   color: white;
@@ -154,14 +156,14 @@
   letter-spacing: 0.35rem;
 }
 .homeTitle span{
-  padding-top: 1rem;
+  padding-top: 2rem;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 3rem;
 }
 
 .challenge{
-  font-size: 2rem;
-  margin-top: -4rem;
+  font-size: 4rem;
+  margin-top: 0;
   margin-left: -20px;
   color:#d3e85e
 }
@@ -170,7 +172,8 @@
 .SectionContainer{
   width: 100vw;
   height: 100vh;  
-  padding-bottom: 10rem;
+  padding: 10rem 0;
+
 }
 
 .SectionContent{
@@ -319,6 +322,7 @@
   grid-template-rows: repeat(5, minmax(0, 1fr));
   grid-auto-flow: row;
   row-gap: 0rem;
+  position: relative;
  
 }
 
@@ -335,6 +339,7 @@
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 600;
+  position: relative;
 }
 
 .season:hover{
@@ -352,10 +357,10 @@
   align-items: center;
   justify-content: center;
   /* background: #f7cf00; */
-  background-image: url("./../assets/images/content-bg.jpg");
+  background-image: url("./../assets/images/content-bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   border-radius: 0 20px 20px 0
 }
 

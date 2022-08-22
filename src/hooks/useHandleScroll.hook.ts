@@ -9,7 +9,7 @@ export const useHandleScroll = () => {
         const div = divRef?.current;
         if( div ){
             const { y: scrollHeight } = div.getBoundingClientRect();
-            const backgroundColor = scrollHeight <= -1300 ? '#03111B' : scrollHeight <= -300 ? '#9dd4d9' : '#6c059c';
+            const backgroundColor = scrollHeight <= -1500 ? '#03111B' : scrollHeight <= -500 ? '#9dd4d9' : '#6c059c';
             setBackground(backgroundColor);
         }
     }
