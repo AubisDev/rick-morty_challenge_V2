@@ -48,7 +48,3 @@ export const useFetchAndSelectSeason = (actualSeason = 1 ) => {
   }
 }
 
-
-export const getSeasons = () => {
-  return ['Season 1', 'Season 2', 'Season 3', 'Season 4', 'Season 5' ]
-} 

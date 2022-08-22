@@ -73,8 +73,6 @@
 
 /* Home Hedaer Styles */
 
-
-
 .homeContainer{
   width: 100vw;
   min-height: 100vh;
@@ -169,6 +167,8 @@
 }
 
 
+/* Characters section Styles */
+
 .SectionContainer{
   width: 100vw;
   height: 100vh;  
@@ -181,8 +181,6 @@
   flex-direction: column;
   width: 90%;
   height: 100%;
-  /* border: 2px solid rgba(181, 17, 214, 0.60); */
-  /* border-radius: 20px; */
   margin: auto;
   align-items: center;
   filter:grayscale(0.2);
@@ -295,7 +293,7 @@
   align-items: center;
 }
 
-
+/* Episodes section Styles */
 
 .EpisodesSectionContainer{
   width: 100vw;
@@ -342,10 +340,26 @@
   position: relative;
 }
 
+.season img{
+  max-width: 100px;
+  opacity: 0.2;
+  padding-right: 0.5rem;
+}
+
+
 .season:hover{
   background: lightblue;
-
 }
+
+.season:hover img {
+  opacity: 1;
+}
+
+.activeSeason, .activeSeason img { 
+  background: lightblue;
+  opacity: 1;
+}
+
 
 .seasonContent{
   width: 80%;

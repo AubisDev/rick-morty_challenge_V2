@@ -8,3 +8,9 @@ export interface Character {
     color: string;
     image: string;
 }
+
+
+export interface SeasonData {
+    title: string;
+    image: string;
+}

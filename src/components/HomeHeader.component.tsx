@@ -14,12 +14,13 @@ const HomeHeader = () => {
           <motion.div 
             initial= {{ opacity: 0, x:-100}}
             whileInView={{ opacity: 1, x:0, rotate:[0,4,0] }}
-            transition={{ duration: 1, type:'spring', bounce: 0.6, }}
+            transition={{ duration: 1, bounce: 0.6, }}
+            viewport={{ once: true }}
             className={styles.homeHeader}>
             <div className={styles.homeTitle}>
               <motion.h2 
                 initial={{ opacity: 0, y: -50 }}
-                whileInView={{ opacity: 1, y: 0}}
+                animate={{ opacity: 1, y: 0}}
                 transition={{duration:1, type:'tween', delay: 0.5}}
               >
                 Welcome 
@@ -29,7 +30,7 @@ const HomeHeader = () => {
                 alt="rick-morty-logo" 
                 style={{ width: '30em', marginTop: '8rem' }}
                 initial={{ opacity: 0, x: -50 }}
-                whileInView={{ opacity: [0,1], scale: [1.15,1], x:0 }}
+                animate={{ opacity: [0,1], scale: [1.15,1], x:0 }}
                 transition={{duration:0.6, type:'spring' ,delay: 0.5, bounce: 0.6}}
               />
               <motion.h2
@@ -43,7 +44,7 @@ const HomeHeader = () => {
                 alt="misterio" 
                 style={{ width:'150px', height:'150px', border: '1px solid rgba(255, 255, 255, 0.2)', borderRadius: "50%", background: 'black' ,boxShadow:'0px 3px 5px rgba(0,0,0,0.4)'}}
                 initial={{ opacity: 0, y:100}}
-                whileInView={{ opacity: 1, y:10 }}
+                animate={{ opacity: 1, y:10 }}
                 transition={{duration:0.6, delay: 0.5}}
               />
             </div>
@@ -53,7 +54,7 @@ const HomeHeader = () => {
               alt="rock y morty" 
               className={styles.homeImage} 
               initial={{ opacity: 0, x:-100}}
-              whileInView={{ opacity: 1, x:0 }}
+              animate={{ opacity: 1, x:0 }}
               transition={{duration:1, type:'spring', bounce: 0.2, delay: 1}}
             />
           </motion.div>

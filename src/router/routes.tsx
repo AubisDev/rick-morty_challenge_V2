@@ -1,6 +1,6 @@
 import { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import PageNotFound from '../pages/PageNotFound.page';
+import PageNotFound from '../pages/PageNotFound';
 import {Navbar, Footer } from "../components";
 // import Loader from "../components/Loader/Loader";
 

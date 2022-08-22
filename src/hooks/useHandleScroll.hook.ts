@@ -1,17 +1,17 @@
 import { useRef, useState } from 'react';
+import { useScroll } from 'framer-motion';
 
 
 export const useHandleScroll = () => {
-    const divRef = useRef<HTMLInputElement>(null);
-    const [background, setBackground] = useState(''); 
+    // const divRef = useRef<HTMLInputElement>(null);
+    const [background, setBackground] = useState('');
+    const scroll = useScroll();
 
     const handleScrollAndBackground = () => {
-        const div = divRef?.current;
-        if( div ){
-            const { y: scrollHeight } = div.getBoundingClientRect();
-            const backgroundColor = scrollHeight <= -1500 ? '#03111B' : scrollHeight <= -500 ? '#9dd4d9' : '#6c059c';
-            setBackground(backgroundColor);
-        }
+        const divRef = scroll.scrollY;
+        const { current: scrollHeight } = divRef;
+        const backgroundColor = scrollHeight >= 1600 ? '#03111B' : scrollHeight >= 600 ? '#9dd4d9' : '#6c059c';
+        setBackground(backgroundColor);
     }
 
     const addScrollListener = () => {
@@ -26,7 +26,6 @@ export const useHandleScroll = () => {
         addScrollListener,
         removeScrollListener,
         background,
-        divRef
     }
 
 }

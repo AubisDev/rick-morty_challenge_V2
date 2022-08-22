@@ -1,11 +1,14 @@
 import { motion } from "framer-motion"
 import styles from '../styles/styles.module.css';
 import { HomeCharacterSectionTitle } from './HomeCharacters.component';
-import { getSeasons, useFetchAndSelectSeason } from '../hooks/useFetchAndSelectSeason.hook';
+import { useFetchAndSelectSeason } from '../hooks/useFetchAndSelectSeason.hook';
+import prueba from './../assets/images/temp1.png';
+import { SeasonData } from '../interfaces/interfaces';
+import { getSeasons } from "../data/SeasonsData";
 
 export const EpisodeSection = () => {
   const { seasonData, fetchEpisodesData, currentSeason }  = useFetchAndSelectSeason();
-  const seasons:string[] = getSeasons();
+  const seasons:SeasonData[] = getSeasons();
   
   return (
     <motion.section 
@@ -18,16 +21,17 @@ export const EpisodeSection = () => {
         <div className={styles.seasonContainer}>
           <div className={styles.seasons}>
             {
-              seasons.map( (season:string, i:number ) => (
+              seasons.map( (season:SeasonData, i:number ) => (
                 <motion.div 
                   initial={{  opacity: 0, y: -50  }} 
                   whileInView={{  opacity: 1, y: 0}}
                   transition={{ duration : 0.6, delay: i && i * 0.2 }}
-                  key={season} 
-                  className={styles.season}
+                  key={season.title} 
+                  className={`${styles.season} ${ currentSeason === i+1 && styles.activeSeason } `}
                   onClick={ () => fetchEpisodesData(i+1) } 
-                >
-                  {season}
+                > 
+                <img src={season.image } />
+                  {season.title}
                 </motion.div>
               ))
             }
