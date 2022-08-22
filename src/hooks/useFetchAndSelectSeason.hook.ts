@@ -7,7 +7,7 @@ interface SeasonData {
   episode: string;
 }
 
-export const useSelectSeason = (actualSeason = 1 ) => {
+export const useFetchAndSelectSeason = (actualSeason = 1 ) => {
 
     const [seasonData, setSeasonData] = useState<SeasonData[] >([]);
     const [currentSeason, setCurrentSeason] = useState<number>();
@@ -39,8 +39,6 @@ export const useSelectSeason = (actualSeason = 1 ) => {
         console.log(err);
         return []
       })
-
-      
     }
     
   return {

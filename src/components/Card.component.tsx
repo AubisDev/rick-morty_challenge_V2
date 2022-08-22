@@ -1,7 +1,7 @@
 import { createContext, ReactElement, useContext } from "react"
-import styles from '../../styles/styles.module.css';
+import styles from '../styles/styles.module.css';
 import { motion } from 'framer-motion';
-import { CardsContextProps, Character } from '../../interfaces/interfaces';
+import { CardsContextProps, Character } from '../interfaces/interfaces';
 
 export const CardContext = createContext({} as CardsContextProps);
 const { Provider } = CardContext;
@@ -30,8 +30,7 @@ export const Card = ({children,  index, character }: CardProps ) => {
 }
 
 
-
-Card.Title = function CardTitle({ title }: {title?: string}) {
+Card.Title = function CardTitle() {
   const { character } = useContext( CardContext );
   return (
     <div style={{color: 'rgba(0,0,0,0.75)'}}>
@@ -42,7 +41,7 @@ Card.Title = function CardTitle({ title }: {title?: string}) {
 
 
 
-Card.Image = function CardImage( {image = ''} ){
+Card.Image = function CardImage( ){
   const { character } = useContext( CardContext );
   return (
      <img src={character.image} alt="profile" className={styles.cardImage} />
@@ -56,3 +55,6 @@ Card.Text = function CardText({ text }: {text:string}) {
     <p>Nombre: {text}</p>
   )
 }
+
+
+export default Card;

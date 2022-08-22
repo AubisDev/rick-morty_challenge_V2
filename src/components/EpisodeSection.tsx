@@ -1,17 +1,10 @@
 import { motion } from "framer-motion"
 import styles from '../styles/styles.module.css';
-import { HomeCharacterSectionTitle } from './Characters.Home';
-import { getSeasons, useSelectSeason } from '../hooks/useSelectSeason';
-
-//! ****
-const seasons = ['Season 1', 'Season 2', 'Season 3', 'Season 4', 'Season 5' ]
-//! ****
-
+import { HomeCharacterSectionTitle } from './HomeCharacters.component';
+import { getSeasons, useFetchAndSelectSeason } from '../hooks/useFetchAndSelectSeason.hook';
 
 export const EpisodeSection = () => {
-
-  
-  const { seasonData, fetchEpisodesData, currentSeason }  = useSelectSeason();
+  const { seasonData, fetchEpisodesData, currentSeason }  = useFetchAndSelectSeason();
   const seasons:string[] = getSeasons();
   
   return (
@@ -55,3 +48,4 @@ export const EpisodeSection = () => {
   )
 }
 
+export default EpisodeSection;

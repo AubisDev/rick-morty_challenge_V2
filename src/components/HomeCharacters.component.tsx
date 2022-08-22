@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Card } from './Card/Card';
+import { Card } from './Card.component';
 
 import characters from '../assets/images/RickAndMorty-TotalRickall-900x900.jpg';
 import styles from '../styles/styles.module.css';
@@ -34,14 +34,14 @@ export const HomeCharacters = () => {
       whileInView={{ opacity: 1, y: 0 , transition:{ duration: 0.6, ease:"easeIn" }}}
       className={styles.SectionContainer} >
       <div className={styles.SectionContent}>
-        <HomeCharacterSectionTitle title="'Details of your favorite characters"/>
+        <HomeCharacterSectionTitle title="Details of your favorite characters"/>
         <div className={styles.content}>
           <img src={ characters } alt="characterimg"  style={{ height: '525px',paddingLeft: '1em'}}/>
           <div className={styles.cardsContainer}>
             <div className={styles.cards}>
               {
                 CardsData.map( (character,i) => (
-                  <Card character={character} index={i} >
+                  <Card key={character.name} character={character} index={i} >
                     <Card.Image />
                     <Card.Title  />
                   </Card>
@@ -56,13 +56,15 @@ export const HomeCharacters = () => {
   )
 }
 
+export default HomeCharacters;
+
 
 
 interface titleProps {
   title: string;
 }
 
- {/* !Colocado aqui porque es pura logica de framer motion para su animacion */}
+ {/* !Colocado aqui porque es pura logica de framer motion y js para la animacion */}
 export const HomeCharacterSectionTitle = ({title}:titleProps) =>{
   return (
     <motion.div 

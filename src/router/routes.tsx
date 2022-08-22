@@ -1,14 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import PageNotFound from '../pages/PageNotFound';
 import { lazy, Suspense, useState } from 'react';
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
+import PageNotFound from '../pages/PageNotFound.page';
+import {Navbar, Footer } from "../components";
 // import Loader from "../components/Loader/Loader";
 
-
-
-const HomePage = lazy( () => import( /* webpackChunkName: "HomePage" */"../pages/Home" ));
-const CharacterPage = lazy( () => import( /* webpackChunkName: "CharactersPage" */"../pages/Characters" ));
+const HomePage = lazy( () => import( /* webpackChunkName: "HomePage" */"../pages/Home.page" ));
+const CharacterPage = lazy( () => import( /* webpackChunkName: "CharactersPage" */"../pages/Characters.page" ));
 
 const PageRoutes = () => {
  const [page, setPage] = useState<number>(1);  

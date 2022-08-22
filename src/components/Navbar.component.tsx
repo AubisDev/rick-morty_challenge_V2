@@ -11,7 +11,7 @@ const Navbar = () => {
         <ul className={styles.navbar__menu}>
           {
             ['/','Characters','Episodes'].map( (page) => (
-              <li className={styles.navbar__item}>
+              <li key={page} className={styles.navbar__item}>
                 <NavLink 
                   to={page}
                   style={({ isActive }) =>
