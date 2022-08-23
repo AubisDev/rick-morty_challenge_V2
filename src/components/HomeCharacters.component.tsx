@@ -34,9 +34,10 @@ export const HomeCharacters = () => {
       whileInView={{ opacity: 1, y: 0 , transition:{ duration: 0.6, ease:"easeIn" }}}
       className={styles.SectionContainer} >
       <div className={styles.SectionContent}>
-        <HomeCharacterSectionTitle title="Details  of  your  favorite  characters"/>
+        <HomeCharacterSectionTitle title="Know  your  favorite  characters"/>
+        
         <div className={styles.content}>
-          <img src={ characters } alt="characterimg"  style={{ height: '525px',paddingLeft: '1em'}}/>
+          <img src={ characters } alt="characterimg" className={styles.StaticCharsImage}/>
           <div className={styles.cardsContainer}>
             <div className={styles.cards}>
               {
@@ -48,7 +49,7 @@ export const HomeCharacters = () => {
                 ))
               }
             </div>
-            <NavLink to='characters' className={styles.button}>GO TO CHARACTERS PAGE</NavLink>
+            <NavLink to='characters' className={styles.button}>Go to characters page</NavLink>
           </div>
         </div>
       </div>
@@ -77,7 +78,7 @@ export const HomeCharacterSectionTitle = ({title}:titleProps) =>{
         <motion.h2
           key={letter + "-" + i}
           variants={letter}
-          style={{ padding:'0.25rem'}}
+          // style={{ padding:'0.25rem'}}
         >
           {letra}
         </motion.h2>

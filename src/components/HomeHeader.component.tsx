@@ -28,7 +28,7 @@ const HomeHeader = () => {
               <motion.img 
                 src={logo} 
                 alt="rick-morty-logo" 
-                style={{ width: '30em', marginTop: '8rem' }}
+                className={styles.dabImage}
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: [0,1], scale: [1.15,1], x:0 }}
                 transition={{duration:0.6, type:'spring' ,delay: 0.5, bounce: 0.6}}
@@ -41,8 +41,8 @@ const HomeHeader = () => {
               >Challenge</motion.h2>
               <motion.img 
                 src={rickandmorty_dab} 
-                alt="misterio" 
-                style={{ width:'150px', height:'150px', border: '1px solid rgba(255, 255, 255, 0.2)', borderRadius: "50%", background: 'black' ,boxShadow:'0px 3px 5px rgba(0,0,0,0.4)'}}
+                alt="misterio"
+                className={styles.minilogo}
                 initial={{ opacity: 0, y:100}}
                 animate={{ opacity: 1, y:10 }}
                 transition={{duration:0.6, delay: 0.5}}

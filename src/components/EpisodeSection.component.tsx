@@ -2,7 +2,6 @@ import { motion } from "framer-motion"
 import styles from '../styles/styles.module.css';
 import { HomeCharacterSectionTitle } from './HomeCharacters.component';
 import { useFetchAndSelectSeason } from '../hooks/useFetchAndSelectSeason.hook';
-import prueba from './../assets/images/temp1.png';
 import { SeasonData } from '../interfaces/interfaces';
 import { getSeasons } from "../data/SeasonsData";
 
