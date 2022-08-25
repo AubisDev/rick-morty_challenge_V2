@@ -16,7 +16,7 @@ const PageRoutes = () => {
           <Navbar/>
             <Routes>
               <Route path="/" element={<HomePage/>} />
-              <Route path="/characters" element={<CharacterPage  />} />
+              <Route path="/characters" element={<CharacterPage page={page} setPage={setPage}/>} />
               <Route path="/page-not-found" element={<PageNotFound/>} />
               <Route path="*" element={<Navigate to="/page-not-found" replace  />} />
             </Routes>

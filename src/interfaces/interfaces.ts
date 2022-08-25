@@ -7,6 +7,13 @@ export interface Character {
     name: string;
     color: string;
     image: string;
+    gender?: string;
+    status?: string;
+    species?: string;
+    type?: string;
+    origin?: {
+        name: string;
+    }
 }
 
 
