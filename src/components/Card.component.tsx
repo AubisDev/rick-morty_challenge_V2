@@ -63,13 +63,17 @@ Card.Image = function CardImage({image=""}:{image:string;} ){
   )
 }
 
+interface CardTextProps {
+  text: string| undefined; 
+  title: string;
+  style?: React.CSSProperties;
+}
 
-
-Card.Text = function CardText({ title, text }: {text:string| undefined; title: string}) {
+Card.Text = function CardText({ title, text, style }: CardTextProps) {
   return (
     <div className={chars.cardText}>
       <p>{title}:</p> 
-      <span>{text}</span>
+      <span style={style}>{text}</span>
     </div>
   )
 }
