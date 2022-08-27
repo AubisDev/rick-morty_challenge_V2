@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { useScroll } from 'framer-motion';
+import { MotionValue, useScroll } from 'framer-motion';
 
 
 export const useHandleScroll = () => {

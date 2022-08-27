@@ -33,9 +33,9 @@
   font-size: 1.2rem;
   margin: 0 1rem;
   padding: 15px 0;
-  position: relative; 
- 
+  position: relative;
 }
+
 
 .navbar__item a:after {    
   background: #fff;
@@ -58,6 +58,11 @@
   padding: 10px 10px;
   position: relative;
   text-decoration: none;
+}
+
+.navbarColor{
+  background-color: rgba(3, 17, 27, 0.60);
+  border-bottom:1px solid #1dccc9;
 }
 
 .navbar__item a:hover:after { 

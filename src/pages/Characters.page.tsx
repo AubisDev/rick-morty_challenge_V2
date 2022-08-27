@@ -1,6 +1,6 @@
 import chars from '../styles/chars.module.css';
 import { Card, Pagination } from '../components';
-import { useCharactersFetch } from '../hooks/useCharactersFetch';
+import { useCharactersFetch } from '../hooks/useCharactersFetch.hook';
 
 
 

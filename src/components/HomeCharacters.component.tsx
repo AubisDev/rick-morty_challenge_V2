@@ -34,7 +34,7 @@ export const HomeCharacters = () => {
       whileInView={{ opacity: 1, y: 0 , transition:{ duration: 0.6, ease:"easeIn" }}}
       className={styles.SectionContainer} >
       <div className={styles.SectionContent}>
-        <HomeCharacterSectionTitle title="Know  your  favorite  characters"/>
+        <HomeCharacterSectionTitle title="Find  all  your  favorite  characters"/>
         
         <div className={styles.content}>
           <img src={ characters } alt="characterimg" className={styles.StaticCharsImage}/>

@@ -38,7 +38,7 @@ export const Card = ({children,  index, character }: CardProps ) => {
 }
 
 
-Card.Title = function CardTitle({ title }: {title:string;}) {
+Card.Title = function CardTitle({ title }: {title?:string;}) {
   const { character } = useContext( CardContext );
   return (
     <div style={{color: 'rgba(0,0,0,0.75)'}}>
@@ -52,7 +52,7 @@ Card.Title = function CardTitle({ title }: {title:string;}) {
 
 
 
-Card.Image = function CardImage({image=""}:{image:string;} ){
+Card.Image = function CardImage({image=""}:{image?:string;} ){
   const { character } = useContext( CardContext );
   return (
      <img 
@@ -64,8 +64,8 @@ Card.Image = function CardImage({image=""}:{image:string;} ){
 }
 
 interface CardTextProps {
-  text: string| undefined; 
-  title: string;
+  text?: string| undefined; 
+  title?: string;
   style?: React.CSSProperties;
 }
 

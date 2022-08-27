@@ -19,6 +19,8 @@ export const Pagination = ({ page, handlePagination}:PaginationProps) => {
         pageRangeDisplayed={5}
         pageCount={42}
         previousLabel={`${page > 1 ? "< Previous" : ''}`}
+        pageClassName="page"
+        activeClassName="selected"
       />
     </>
   )

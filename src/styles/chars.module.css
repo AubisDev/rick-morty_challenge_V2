@@ -118,9 +118,7 @@
 
 }
 
-ul li a:hover {
-  color: white;
-}
+
 
 li{
   padding: 0 0.5rem;
@@ -129,10 +127,6 @@ li{
   cursor:pointer;
 }
 
-
-.selected {
-    color: red ;
-}
 
 @media (max-width:1285px){
     .cards{
