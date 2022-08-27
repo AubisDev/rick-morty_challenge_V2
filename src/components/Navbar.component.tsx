@@ -15,10 +15,10 @@ const Navbar = () => {
                 <NavLink 
                   to={page}
                   style={({ isActive }) =>
-                    isActive ? {text: '#34c0c9'} : {color: '#d3e85e'}
+                    isActive ? {color: '#d3e85e'} : {color: 'white'}
                 }
                 >
-                  {page === '/' ? 'Home' : page}
+                  {page === '/' ? <> <i className="fa-solid fa-house"></i> Home </> : <> <i className="fa-solid fa-people-group"></i> {page}  </>}
                 </NavLink>
               </li>
             ))

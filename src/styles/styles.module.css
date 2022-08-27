@@ -52,12 +52,19 @@
 
 .navbar__item a {
   color: #fff;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   font-family: 'PT Sans', sans-serif;
   letter-spacing: 0.12em;
   padding: 10px 10px;
   position: relative;
   text-decoration: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__item i{
+  padding-bottom: 3px;
 }
 
 .navbarColor{
@@ -348,7 +355,10 @@
   padding: 1.3rem 3rem;
   position: absolute;
   transition-duration: 300ms;
+  text-decoration: none;
+  display:flex
 }
+
 
 
 .button:hover{

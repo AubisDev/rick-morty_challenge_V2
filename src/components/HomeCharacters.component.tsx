@@ -49,7 +49,7 @@ export const HomeCharacters = () => {
                 ))
               }
             </div>
-            <NavLink to='characters' className={styles.button}>Go to characters page</NavLink>
+            <NavLink to='characters' className={styles.button}>Go to characters page <i className="fa-solid fa-circle-arrow-right"></i></NavLink>
           </div>
         </div>
       </div>
@@ -66,6 +66,7 @@ interface titleProps {
 }
 
  {/* !Colocado aqui porque es pura logica de framer motion y js para la animacion */}
+
 export const HomeCharacterSectionTitle = ({title}:titleProps) =>{
   return (
     <motion.div 
