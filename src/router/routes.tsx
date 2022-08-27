@@ -1,14 +1,11 @@
 import { lazy, Suspense, useState } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import PageNotFound from '../pages/PageNotFound';
 import {Navbar, Footer } from "../components";
-// import Loader from "../components/Loader/Loader";
 
 const HomePage = lazy( () => import( /* webpackChunkName: "HomePage" */"../pages/Home.page" ));
 const CharacterPage = lazy( () => import( /* webpackChunkName: "CharactersPage" */"../pages/Characters.page" ));
 
 const PageRoutes = () => {
- const [page, setPage] = useState<number>(1);  
   return (
     <>
       <Suspense fallback={ <h1>Loading...</h1> } >
@@ -16,9 +13,8 @@ const PageRoutes = () => {
           <Navbar/>
             <Routes>
               <Route path="/" element={<HomePage/>} />
-              <Route path="/characters" element={<CharacterPage page={page} setPage={setPage}/>} />
-              <Route path="/page-not-found" element={<PageNotFound/>} />
-              <Route path="*" element={<Navigate to="/page-not-found" replace  />} />
+              <Route path="/characters" element={<CharacterPage />} />
+              <Route path="*" element={<Navigate to="/" replace  />} />
             </Routes>
           <Footer/>
         </BrowserRouter>
