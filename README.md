@@ -1,6 +1,6 @@
 # Proyecto: Rick and Morty Challenge
 
-## Proyecto realizado por una oportunidad de participar en el Hackaton realizado por Gentleman Programming
+## Proyecto realizado por una oportunidad de participar en el Hackathon realizado por Gentleman Programming
 
 
 ### Previsualizar el proyecto:
