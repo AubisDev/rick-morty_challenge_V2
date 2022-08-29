@@ -191,6 +191,31 @@
   background-color: lightblue;
 }
 
+@media (min-width:1760px){
+
+  .homeTitle h2:first-child{
+    font-size: 6rem;
+    padding-bottom: 1rem;
+    margin-left: -1rem;
+  }
+
+  .challenge{
+    font-size: 6rem;
+    padding-top: 2rem;
+  }
+  
+  .minilogo{
+    width: 200px;
+    height: 200px;
+  }
+
+  .homeImage{
+    max-height: 700px;
+    width: auto;
+  }
+}
+
+
 @media (max-width:1260px){
 
   .homeHeader{
@@ -220,6 +245,8 @@
     top: 15%;
   }
 }
+
+
 
 @media (max-width:850px){
 
@@ -359,6 +386,10 @@
   display:flex
 }
 
+.button i{
+  padding-left: 0.75rem;
+  margin-top: 2px;
+}
 
 
 .button:hover{
@@ -410,6 +441,25 @@
   display: flex;
   align-items: center;
 }
+
+
+@media (min-width:1760px){
+  .StaticCharsImage{
+    height: 750px;
+  }
+
+  .card{
+    width: 50%;
+    height: 70%;
+  }
+
+  .button{
+    bottom: -20px;
+    font-size: 1.5rem;
+  }
+
+}
+
 
 @media (max-width:1285px){
   .StaticCharsImage{
@@ -634,6 +684,13 @@
   border-radius: 0 0 0 20px ;
 }
 
+
+@media (min-width:1760px){
+  .episodesContent span:last-child{
+    font-size: 1.2rem;
+  }
+}
+
 @media (max-width:1250px){
   .seasonContainer{
     width: 90%;
@@ -730,3 +787,9 @@
   width: 100vw;
 }
 
+
+@media (min-width:1760px){
+  .footerContainer{
+    font-size: 1.5rem;
+  }
+}

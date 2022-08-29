@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 import logo from './../assets/images/Rick_and_Morty.svg.webp';
 import mainbg from './../assets/images/rickmorty3.webp';
-import rickandmorty_dab from './../assets/images/prueba.webp';
+import rickandmorty_circle from './../assets/images/prueba.webp';
 
 import styles from '../styles/styles.module.css';
 
@@ -40,7 +40,7 @@ const HomeHeader = () => {
                 transition={{duration:0.6,delay: 0.5}}
               >Challenge</motion.h2>
               <motion.img 
-                src={rickandmorty_dab} 
+                src={rickandmorty_circle} 
                 alt="misterio"
                 className={styles.minilogo}
                 initial={{ opacity: 0, y:100}}
