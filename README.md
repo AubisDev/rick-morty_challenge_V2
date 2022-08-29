@@ -1,3 +1,4 @@
+![R&M Challenge](https://i.imgur.com/AceEkO4.png)
 # Proyecto: Rick and Morty Challenge
 
 ## Proyecto realizado por una oportunidad de participar en el Hackathon de Gentleman Programming
