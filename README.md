@@ -1,10 +1,10 @@
 # Proyecto: Rick and Morty Challenge
 
-## Proyecto realizado por una oportunidad de participar en el Hackaton realizado por Gentleman Programming
+## Proyecto realizado por una oportunidad de participar en el Hackathon de Gentleman Programming
 
 
 ### Previsualizar el proyecto:
-#### [Live Demo](https://rickandmorty-gp-challenge.netlify.app/)
+#### [Live Website](https://rickandmorty-gp-challenge.netlify.app/)
 ___
 
 
