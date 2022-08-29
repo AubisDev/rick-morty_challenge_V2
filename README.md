@@ -4,7 +4,7 @@
 
 
 ### Previsualizar el proyecto:
-#### [Live Demo](https://rickandmorty-gp-challenge.netlify.app/)
+#### [Live Website](https://rickandmorty-gp-challenge.netlify.app/)
 ___
 
 
