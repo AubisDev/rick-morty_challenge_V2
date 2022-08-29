@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Card } from './Card.component';
 
-import characters from '../assets/images/RickAndMorty-TotalRickall-900x900.webp';
+import characters from '../assets/images/personajes.webp';
 import styles from '../styles/styles.module.css';
 import { GetCharactersHomeSectionData } from '../data/CharactersData';
 
